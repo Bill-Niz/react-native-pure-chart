@@ -141,7 +141,7 @@ export default class ColumnChart extends Component {
               </View>
               {drawXAxis(this.props.xAxisColor)}
               <View style={{ marginLeft: this.props.defaultColumnWidth / 2 }}>
-                {drawXAxisLabels(this.state.sortedData[0].data, this.state.gap, this.props.labelColor, this.props.showEvenNumberXaxisLabel)}
+                {drawXAxisLabels(this.state.sortedData[0].data, this.state.gap, this.props.labelColor, this.props.showEvenNumberXaxisLabel, this.props.xAxisLabelsStyle)}
               </View>
             </View>
             {this.drawTooltip(this.state.selectedIndex)}
@@ -203,7 +203,8 @@ const styles = StyleSheet.create({
 })
 
 ColumnChart.propTypes = {
-  data: PropTypes.array
+  data: PropTypes.array,
+  xAxisLabelsStyle: PropTypes.object
 }
 ColumnChart.defaultProps = {
   data: [],
@@ -212,5 +213,6 @@ ColumnChart.defaultProps = {
   defaultColumnMargin: 20,
   primaryColor: '#297AB1',
   highlightColor: 'red',
-  showEvenNumberXaxisLabel: true
+  showEvenNumberXaxisLabel: true,
+  xAxisLabelsStyle:{}
 }
