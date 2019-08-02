@@ -36,6 +36,7 @@ export default class ColumnChart extends Component {
     Animated.timing(this.state.fadeAnim, {
       toValue: 1, easing: Easing.bounce, duration: 1000, useNativeDriver: true
     }).start()
+    this.setState({ selectedIndex: this.props.initialSelectedIndex })
   }
 
   renderColumns (fadeAnim) {
@@ -141,7 +142,7 @@ export default class ColumnChart extends Component {
               </View>
               {drawXAxis(this.props.xAxisColor)}
               <View style={{ marginLeft: this.props.defaultColumnWidth / 2 }}>
-                {drawXAxisLabels(this.state.sortedData[0].data, this.state.gap, this.props.labelColor, this.props.showEvenNumberXaxisLabel, this.props.xAxisLabelsStyle)}
+                {drawXAxisLabels(this.state.sortedData[0].data, this.state.gap, this.props.labelColor, this.props.showEvenNumberXaxisLabel, this.props.xAxisLabelsStyle, this.state.selectedIndex)}
               </View>
             </View>
             {this.drawTooltip(this.state.selectedIndex)}
@@ -203,8 +204,7 @@ const styles = StyleSheet.create({
 })
 
 ColumnChart.propTypes = {
-  data: PropTypes.array,
-  xAxisLabelsStyle: PropTypes.object
+  data: PropTypes.array
 }
 ColumnChart.defaultProps = {
   data: [],
@@ -214,5 +214,6 @@ ColumnChart.defaultProps = {
   primaryColor: '#297AB1',
   highlightColor: 'red',
   showEvenNumberXaxisLabel: true,
-  xAxisLabelsStyle:{}
+  xAxisLabelsStyle:{},
+  initialSelectedIndex:null
 }
