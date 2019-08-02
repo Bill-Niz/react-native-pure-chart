@@ -155,7 +155,8 @@ export default class ColumnChart extends Component {
 const styles = StyleSheet.create({
   wrapper: {
     flexDirection: 'row',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    paddingRight: 30,
   },
   mainContainer: {
     paddingBottom: 0,
