@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
   wrapper: {
     flexDirection: 'row',
     overflow: 'hidden',
-    paddingRight: 30,
+    paddingRight: 40,
   },
   mainContainer: {
     paddingBottom: 0,
