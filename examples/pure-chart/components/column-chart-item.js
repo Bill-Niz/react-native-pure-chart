@@ -22,7 +22,7 @@ export default class ColumnChartItem extends Component {
       )
     }
     return (
-      <TouchableWithoutFeedback onPressIn={(evt) => this.props.onClick(evt)}>
+      <TouchableWithoutFeedback onPress={(evt) => this.props.onClick(evt)}>
         <View style={{height: this.props.defaultHeight}}>
           <View style={styles.chartView}>
             {renders}
