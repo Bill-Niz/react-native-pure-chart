@@ -55,6 +55,7 @@ export default class ColumnChart extends Component {
             defaultMargin={this.props.defaultColumnMargin}
             isSelected={this.state.selectedIndex === i}
             highlightColor={this.props.highlightColor}
+            barStyle={this.props.barStyle}
             onClick={(evt) => this.handleClick(evt, i)} />
         )
       }
@@ -225,6 +226,7 @@ ColumnChart.defaultProps = {
   highlightColor: 'red',
   showEvenNumberXaxisLabel: true,
   xAxisLabelsStyle:{},
+  barStyle:{},
   initialSelectedIndex:null,
   yLabelsSuffix:''
 }
