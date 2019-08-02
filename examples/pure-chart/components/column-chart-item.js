@@ -18,7 +18,7 @@ export default class ColumnChartItem extends Component {
           marginRight: lastElementMarginRight,
           backgroundColor: this.props.seriesArray[seriesIndex].seriesColor,
           borderColor: this.props.isSelected ? this.props.highlightColor : '#FFFFFF'
-        }]} />
+        },{...this.props.barStyle}]} />
       )
     }
     return (
