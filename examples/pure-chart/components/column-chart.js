@@ -138,7 +138,7 @@ export default class ColumnChart extends Component {
                             this.props.yLabelsSuffix)}
         </View>
         <View style={styles.mainContainer}>
-          <ScrollView horizontal>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
             <View>
               <View ref='chartView' style={styles.chartContainer}>
                 {drawYAxis(this.props.yAxisColor)}
