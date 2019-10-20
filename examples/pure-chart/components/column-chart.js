@@ -156,7 +156,7 @@ export default class ColumnChart extends Component {
                                  )}
               </View>
             </View>
-            {this.drawTooltip(this.state.selectedIndex)}
+            {this.drawTooltip(this.state.selectedIndex, this.props.yLabelsSuffix)}
           </ScrollView>
         </View>
       </View>
