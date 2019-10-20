@@ -79,7 +79,7 @@ export default class ColumnChart extends Component {
       }
     })
   }
-  drawTooltip (selectedIndex) {
+  drawTooltip (selectedIndex, yLabelsSuffix ='') {
     if (typeof (selectedIndex) === 'number' && selectedIndex >= 0) {
       let standardSeries = this.state.sortedData[0]
       if (!standardSeries) {
@@ -106,7 +106,7 @@ export default class ColumnChart extends Component {
         tooltipRenders.push(
           <View key={'tooltipText-' + i} style={{flexDirection: 'row', paddingLeft: 5, alignItems: 'center'}}>
             <View style={[styles.tooltipColor, {backgroundColor: !series.seriesColor ? this.props.primaryColor : series.seriesColor}]} />
-            <Text style={styles.tooltipValue}>{numberWithCommas(series.data[selectedIndex]['y'], false)}</Text>
+            <Text style={styles.tooltipValue}>{numberWithCommas(series.data[selectedIndex]['y'], false)+ yLabelsSuffix}</Text>
           </View>
         )
       }
