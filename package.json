@@ -1,6 +1,6 @@
 {
   "name": "react-native-pure-chart",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "description": "",
   "devDependencies": {
     "jest-expo": "~20.0.0",
@@ -36,7 +36,7 @@
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/oksktank/react-native-pure-chart/issues"
+    "url": "https://github.com/Bill-Niz/react-native-pure-chart/issues"
   },
-  "homepage": "https://github.com/oksktank/react-native-pure-chart#readme"
+  "homepage": "https://github.com/Bill-Niz/react-native-pure-chart#readme"
 }
